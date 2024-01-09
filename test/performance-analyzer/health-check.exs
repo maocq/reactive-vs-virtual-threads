@@ -8,8 +8,8 @@ config :distributed_performance_analyzer,
     body: ""
   },
   execution: %{
-    steps: 30,
-    increment: 100,
+    steps: 20,
+    increment: 200,
     duration: 500,
     constant_load: false,
     dataset: :none,
@@ -19,3 +19,4 @@ config :distributed_performance_analyzer,
 
 config :logger,
   level: :warn
+  
