@@ -1,0 +1,11 @@
+{
+    "StackName": "test-stack-mao",
+    "UrlReposity": "https://github.com/maocq/reactive-vs-virtual-threads",
+    "VpcId": "vpc-0f4999e5a0807d788",
+    "SubnetId": "subnet-001bc47273ea5c656",
+    "InstanceType": "c5.large",
+    "ImageId": "ami-0c7217cdde317cfec",
+    "User": "ubuntu",
+    "KeyName": "johncarm-test",
+    "Key": "/Users/johncarm/mao/keys/johncarm-test.pem"
+}
