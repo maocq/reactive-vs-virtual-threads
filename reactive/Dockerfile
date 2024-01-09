@@ -6,7 +6,7 @@ RUN gradle bootJar
 
 FROM amazoncorretto:21-alpine3.18
 WORKDIR /app
-COPY --from=0 /app/build/libs/virtualthreads-0.0.1-SNAPSHOT.jar /app/virtualthreads.jar
+COPY --from=0 /app/build/libs/reactive-0.0.1-SNAPSHOT.jar /app/reactive.jar
 
 ENV JAVA_OPTS="-XX:+UseContainerSupport"
-ENTRYPOINT ["sh","-c","java $JAVA_OPTS -jar virtualthreads.jar"]
+ENTRYPOINT ["sh","-c","java $JAVA_OPTS -jar reactive.jar"]
