@@ -32,7 +32,7 @@ for FILE in test/performance-analyzer/*; do
     echo "------>> $case $scenario" > /dev/tty
 
     _out=$(execute_remote_command "rm -f result.csv" "$tests_ip" "$User" "$Key")
-    execute_remote_command "docker run --rm -v \$(pwd):/home/dpa/config bancolombia/distributed-performance-analyzer:0.6.1" "$tests_ip" "$User" "$Key" > /dev/tty
+    execute_remote_command "docker run --rm -v \$(pwd):/home/dpa/config bancolombia/distributed-performance-analyzer:0.6.2" "$tests_ip" "$User" "$Key" > /dev/tty
 
     download_file $tests_ip "result.csv" ".tmp/results/$scenario|$case.csv" $User $Key
     echo "-------> $case $scenario" > /dev/tty
