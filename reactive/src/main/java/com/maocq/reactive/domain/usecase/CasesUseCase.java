@@ -16,4 +16,8 @@ public class CasesUseCase {
         return helloGateway.hello(latency)
                 .flatMap(x -> Mono.just(Primes.primes(10000)));
     }
+
+    public Mono<String> caseTwo(int latency) {
+        return helloGateway.hello(latency);
+    }
 }

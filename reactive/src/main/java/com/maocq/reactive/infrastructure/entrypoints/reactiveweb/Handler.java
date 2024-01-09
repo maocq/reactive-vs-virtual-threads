@@ -23,4 +23,11 @@ public class Handler {
         return useCases.caseOne(latency)
                 .flatMap(response -> ServerResponse.ok().bodyValue(response));
     }
+
+    public Mono<ServerResponse> caseTwo(ServerRequest serverRequest) {
+        var latency = serverRequest.queryParam("latency").map(Integer::valueOf).orElse(0);
+
+        return useCases.caseTwo(latency)
+                .flatMap(response -> ServerResponse.ok().bodyValue(response));
+    }
 }
