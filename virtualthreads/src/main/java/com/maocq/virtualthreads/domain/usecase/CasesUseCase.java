@@ -15,4 +15,8 @@ public class CasesUseCase {
         String x = helloGateway.hello(latency);
         return Primes.primes(10000);
     }
+
+    public String caseTwo(int latency) {
+        return helloGateway.hello(latency);
+    }
 }

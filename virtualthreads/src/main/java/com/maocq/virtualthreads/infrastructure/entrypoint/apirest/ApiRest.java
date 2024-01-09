@@ -23,4 +23,10 @@ public class ApiRest {
         var latencyParam = latency.orElse(0);
         return useCases.caseOne(latencyParam);
     }
+
+    @GetMapping("/api/case-two")
+    String caseTwo(@RequestParam Optional<Integer> latency) {
+        var latencyParam = latency.orElse(0);
+        return useCases.caseTwo(latencyParam);
+    }
 }
