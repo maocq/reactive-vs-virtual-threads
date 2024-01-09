@@ -1,7 +1,7 @@
 import Config
 
 config :distributed_performance_analyzer,
-  url: "http://_IP_:8080/api/hello",
+  url: "http://_IP_:8080/api/case-one?latency=300",
   request: %{
     method: "GET",
     headers: [],
@@ -9,7 +9,7 @@ config :distributed_performance_analyzer,
   },
   execution: %{
     steps: 20,
-    increment: 200,
+    increment: 100,
     duration: 500,
     constant_load: false,
     dataset: :none,
@@ -19,4 +19,3 @@ config :distributed_performance_analyzer,
 
 config :logger,
   level: :warn
-  
