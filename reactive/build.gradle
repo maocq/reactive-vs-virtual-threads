@@ -20,6 +20,12 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
+
+	// Lombok
+	compileOnly "org.projectlombok:lombok:${lombokVersion}"
+	annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+	testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
+	testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 }
 
 tasks.named('test') {
