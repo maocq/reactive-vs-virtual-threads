@@ -4,7 +4,7 @@ COPY . .
 RUN gradle bootJar
 
 
-FROM amazoncorretto:21-alpine3.18
+FROM amazoncorretto:21.0.4-alpine3.20
 WORKDIR /app
 COPY --from=0 /app/build/libs/virtualthreads-0.0.1-SNAPSHOT.jar /app/virtualthreads.jar
 
